@@ -48,7 +48,7 @@ function DishesData({ data }) {
 
     return (
         <>
-            <div className='w-[280px] md:w-[403px] h-[240px] md:h-[280px] border rounded-3xl p-4 bg-white'>
+            <div className='w-[280px] md:w-[300px] h-[240px] md:h-[280px] border rounded-3xl p-4 bg-white flex flex-wrap'>
                 <Link to={`/RestaurantMenu/${id}`}>
             {
                 !hideRestaurantDetails && (
@@ -65,7 +65,7 @@ function DishesData({ data }) {
                 <div className='mt-5 md:mt-10 flex gap-5 relative'>
                     <div className='w-[50%] '>
                         {isVeg === 1 ? <img className=' w-3.5 md:w-5' src="https://i.pinimg.com/736x/e4/1f/f3/e41ff3b10a26b097602560180fb91a62.jpg" alt="" /> : <img className='w-3.5 md:w-5' src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Non_veg_symbol.svg/2048px-Non_veg_symbol.svg.png" alt="" />}
-                        <h1 className='text-[16px] md:text-lg font-bold '>{name}</h1>
+                        <h1 className='text-[16px] md:text-sm font-bold '>{name}</h1>
                         <p className='text-[16px] md:text-lg font-bold'>₹{price / 100}</p>
                     </div>
 

@@ -97,13 +97,12 @@ function Search() {
                     {
                         selectedResDish ?
                         <>
-                            <div className='flex flex-col gap-4'>
-                            <p>Itme added to cart </p>
-                            <DishesData data={selectedResDish.card.card}/>
-                            <p>More dishes from this restaurant</p>
+                            <div className='flex flex-col gap-4 justify-center md:justify-start w-full'>
+                                <p className='font-bold'>Itme added to cart </p>
+                                <DishesData data={selectedResDish.card.card}/>
+                                <p className='font-bold'>More dishes from this restaurant</p>
                             </div>
-                            <div className='w-full flex flex-wrap gap-5'>
-
+                            <div className='w-full flex flex-wrap gap-5 justify-center '>
                             {
                                 SimilarResDishes.map((data)=><DishesData data={{...data.card , restaurant: selectedResDish.card.card.restaurant}}/>)
                             }

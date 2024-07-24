@@ -82,7 +82,7 @@ function Cart() {
 
                         <div key={i} className='w-full flex justify-between  mt-6'>
                             <div className='w-[70%]'>
-                                <h1 className=' text-bold text-xl md:text-2xl '>{data.name}</h1>
+                                <h1 className=' text-bold text-lg md:text-xl '>{data.name}</h1>
                                 <p>Price - ₹{data.price / 100 || data.defaultPrice / 100}</p>
                             </div>
                             <div className='w-[30%] relative  flex flex-col items-center justify-end '>

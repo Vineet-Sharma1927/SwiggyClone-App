@@ -1,4 +1,4 @@
-import { signInWithPopup, signOut } from 'firebase/auth'
+import { signInWithPopup, signInWithRedirect, signOut } from 'firebase/auth'
 import React from 'react'
 import { auth, provider } from '../Config/firbaseAuth'
 import { useDispatch, useSelector } from 'react-redux'
@@ -15,7 +15,7 @@ function SignInPage() {
     // const Loginvisible = useSelector((state) => state.toogleslice.loginToggle)
 
     async function handleAuth() {
-        let data = await signInWithPopup(auth, provider)
+        let data = await signInWithRedirect(auth, provider)
         const UserData = {
             name: data?.user?.displayName,
             photo: data?.user?.photoURL
