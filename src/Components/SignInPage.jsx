@@ -15,7 +15,7 @@ function SignInPage() {
     // const Loginvisible = useSelector((state) => state.toogleslice.loginToggle)
 
     async function handleAuth() {
-        let data = await signInWithRedirect(auth, provider)
+        let data = await signInWithPopup(auth, provider)
         const UserData = {
             name: data?.user?.displayName,
             photo: data?.user?.photoURL
